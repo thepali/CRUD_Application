@@ -13,13 +13,13 @@ public class EditServlet2 extends HttpServlet {
        
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
-		 response.setContentType("text/html");  
-	     PrintWriter pw=response.getWriter();  
+	     	 response.setContentType("text/html");  
+	     	 PrintWriter pw=response.getWriter();  
 	    
-	     String pid=request.getParameter("id");  
-	     int id=Integer.parseInt(pid);  
+	         String pid=request.getParameter("id");  
+	     	 int id=Integer.parseInt(pid);  
 	          
-	     String name = request.getParameter("name");
+	     	 String name = request.getParameter("name");
 		 String birthdate = request.getParameter("bdate");
 		 String bloodgroup = request.getParameter("bgroup");
 		 String gender = request.getParameter("gender");
