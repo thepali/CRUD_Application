@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Patient Data</title>
+<style>
+form {
+    background-color: #D3D3D3;
+    padding:70px;
+    text-align: left;
+    margin: auto;
+    display: table;
+}
+
+h2{
+	color: maroon;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+}
+</style>
+</head>
+<body>
+<h2>Add New Patient Details</h2>
+<form action="SaveServlet" method="post" style="align: center">
+	<table>
+	<tr>
+	<td>Name :</td>
+	<td><input type="text" name="name" /><br/></td>
+	</tr>
+  	
+  	<tr>
+  	<td>Birth Date :</td>
+  	<td><input type="date" name="bdate"><br/></td>
+  	</tr>
+  	
+  	<tr>
+  	<td>Blood Group:</td>
+  	<td>
+  	<select name="bgroup" style="width:120px">
+  	<option value="">Choose here</option>
+  	<option>A+</option>
+  	<option>A-</option>
+  	<option>B+</option>
+  	<option>B-</option>
+  	<option>O+</option>
+  	<option>O-</option>
+  	<option>AB+</option>
+  	<option>AB-</option>
+  	</select><br/>
+  	</td>
+  	</tr>
+  	
+  	<tr>
+	<td>Gender :</td>
+	<td>
+	<input type="radio" name="gender" value="male"> Male
+  	<input type="radio" name="gender" value="female"> Female
+  	</td>
+  	</tr>
+  	
+  	<tr>
+  	<td>Contact Number :</td>
+  	<td><input type="text" name="number"><br/></td>
+  	</tr>
+  	
+  	<tr>
+  	<td>Address :</td>
+  	<td><textarea rows="3" cols="50" name="address" /></textarea></td>
+  	</tr>
+  	
+  	<tr>
+  	<td colspan="2">
+  	<input type="submit" value="Save Patient Details">
+  	<input type="reset" value="Clear Form">
+  	</td>
+  	</tr>
+  	</table>
+  	
+  	<br/>
+	<a href="ViewServlet" style="text-align:center">View Patient Details</a>
+</form>
+</body>
+</html>
