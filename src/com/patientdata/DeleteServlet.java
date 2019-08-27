@@ -1,9 +1,6 @@
 package com.patientdata;
 
 import java.io.IOException;
-//import java.sql.Connection;
-//import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,28 +14,9 @@ public class DeleteServlet extends HttpServlet {
 	{
 		
 		String pid=request.getParameter("id");  
-        int id=Integer.parseInt(pid);  
-        PatientDao.delete(id);  
-        response.sendRedirect("ViewServlet");  
-        
-//		Connection con = PatientDao.getConnection();
-//		try 
-//		{
-//			PreparedStatement ps = con.prepareStatement("select id from patientinfo");
-//			ResultSet rs = ps.executeQuery();
-//			if(rs.next()) 
-//			{
-//				int i = rs.getInt("id");
-//				System.out.println("The value of id is " + i);
-//				PatientDao.delete(i);
-//					
-//			}
-//			response.sendRedirect("ViewServlet");
-//		} 
-//		catch (Exception e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		int id=Integer.parseInt(pid);  
+		PatientDao.delete(id);  
+		response.sendRedirect("ViewServlet");
 		
 	}
 
